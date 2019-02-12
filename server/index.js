@@ -1,17 +1,17 @@
-const Movie = require('./models/movies');
+const Serie = require('./models/series');
 
-const movie1 = new Movie();
-movie1.title = "Test Movie 2";
-movie1.year = 1930;
-movie1.released = Date.now();
+const serie1 = new Serie();
+serie1.title = "Test serie 2";
+serie1.year = 1930;
+serie1.released = Date.now();
 
-movie1.save(function(error, result){
+serie1.save(function(error, result){
     console.log("save");
     console.log(error);
     console.log(result);
 });
 
-const fetchMovies = Movie.find({title: "Test Movie"}, function(error, result) {
+const fetchseries = Serie.find({title: "Test serie"}, function(error, result) {
     console.log("find");
     console.log(result);
     console.log(error);
