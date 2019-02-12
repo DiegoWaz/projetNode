@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:title', (req, res) => {
-	Serie.findOne({title: res.params.title}).then(data => res.send(data));
+	Serie.findOne({title: req.params.title}).then(data => res.send(data));
 })
 
 module.exports = router;

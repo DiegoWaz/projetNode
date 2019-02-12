@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
 	Actor.find().then(data => res.send(data));
 })
 
-// router.get('/:title', (req, res) => {
-// 	Actor.findOne({title: res.params.title}).then(data => res.send(data));
-// })
+router.get('/:firstname', (req, res) => {
+	Actor.findOne({firstname: req.params.firstname}).then(data => res.send(data));
+})
 
 module.exports = router;
