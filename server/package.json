@@ -4,9 +4,10 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "./node_modules/bin/nodemon index.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "mongoose": "^5.4.11"
   }
 }

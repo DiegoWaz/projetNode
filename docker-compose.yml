@@ -21,15 +21,14 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
 
   server:
-    image: 'node:10-alpine'
-    container_name: "server_js"
+    build: './server'
     volumes:
       - './server:/home/node/app'
     working_dir: '/home/node/app'
     environment:
       MONGODB_USER: root
       MONGODB_PASSWORD: password
-      MONGODB_DBNAME: SampleCollections
+      MONGODB_DBNAME: Series
     ports:
-      - 3000:3000
+      - 127.0.0.1:3000:3000
     command: 'npm start'
