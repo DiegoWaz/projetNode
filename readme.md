@@ -2,12 +2,10 @@
 
 git clone https://github.com/DiegoWaz/projetNode.git
 
-cd projetNode/server/
-
-npm install mongoose
-npm install express
-npm install body-parse
-
-cd ../
 docker-compose up -d
+
+docker-compose run server npm install mongoose
+docker-compose run server npm install express
+docker-compose run server npm install body-parse
+
 docker compose run server
