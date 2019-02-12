@@ -1,21 +1,21 @@
 const express = require("express");
-const MovieRouter = require('./routes/movies');
+const MovieRouter = require('./routes/serie');
 const app = express();
 
-const Movie = require('./models/movie');
+const Serie = require('./models/serie');
 
-const movie1 = new Movie();
-movie1.title = "Test Movie 2";
-movie1.year = 1930;
-movie1.released = Date.now();
+const serie1 = new Serie();
+serie1.title = "Test serie 2";
+serie1.year = 1930;
+serie1.released = Date.now();
 
-movie1.save(function(error, result){
+serie1.save(function(error, result){
     console.log("save");
     console.log(result);
 });
 
 
-app.use('/movies', MovieRouter);
+app.use('/series', MovieRouter);
 
 
 app.listen(3000, () => console.log('listening'));
