@@ -4,10 +4,12 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/bin/nodemon index.js"
+    "start": "./node_modules/.bin/nodemon index.js"
   },
   "dependencies": {
+    "body-parse": "^0.1.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.11"
+    "mongoose": "^5.4.11",
+    "nodemon": "^1.18.10"
   }
 }
